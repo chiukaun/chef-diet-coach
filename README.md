@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/
 
 它會先分三次問你問題：你的身體、你的目標、你的生活習慣。回答完，它會算出你每天該吃多少，你說 OK 就開始了。
 
-缺點：換一個新對話，它就忘記你是誰，要重貼一次。
+缺點：換一個新對話，它就忘記你是誰。要把網址跟它給你的「你的設定」一起重貼一次。
 
 ### 方法二：每天都要用的話，推薦這個
 
@@ -41,7 +41,9 @@ https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/
 1. 打開 [這個檔案](chef-diet-coach/SKILL.md)，把裡面的文字全部複製
 2. 在 Claude 左邊找到「專案」（Projects），新增一個專案，取名「飲食教練」
 3. 在專案的「指示」（Instructions）欄位，把剛剛複製的文字貼上
-4. 之後每天在這個專案裡開一個新對話，跟它說你吃了什麼就好
+4. 在專案裡開第一個對話，回答教練的問題。最後它會給你一段「你的設定」
+5. 把「你的設定」也貼進專案的「指示」，放在最下面。這樣之後每個新對話，教練都記得你是誰
+6. 之後每天在這個專案裡開一個新對話，跟它說你吃了什麼就好
 
 小技巧：
 
