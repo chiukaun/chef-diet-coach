@@ -12,6 +12,7 @@ Notion 會自己去載圖，不用上傳檔案。
 
 鍵：breakfast 早餐、whey 乳清（或蛋白飲）、lunch 午餐、snack 點心、dinner 晚餐、
 drinks 飲料、reserve 預留、target 目標。沒吃的餐次可以省略。
+可以加 "reserve_label":"預留乳清" 改圖例上預留那一格的名字（預設「預留」）。
 """
 import json
 import sys
@@ -48,7 +49,7 @@ def build_config(kind, g):
         if v > 0:
             data.append(round(v, 1)); fill.append(color); stroke.append(color); width.append(0); names.append(name)
     if res > 0:
-        data.append(round(res, 1)); fill.append("rgba(0,0,0,0)"); stroke.append(RESERVE); width.append(1.5); names.append("預留")
+        data.append(round(res, 1)); fill.append("rgba(0,0,0,0)"); stroke.append(RESERVE); width.append(1.5); names.append(g.get("reserve_label") or "預留")
     if rem > 0:
         data.append(round(rem, 1)); fill.append(TRACK); stroke.append("#3C3C3C"); width.append(1)
         names.append("還能吃" if kind == "kcal" else "還差")
