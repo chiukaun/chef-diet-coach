@@ -1,11 +1,11 @@
-# 主廚飲食教練（Notion 版）
+# 飲食教練阿榮（Notion 版）
 
 > 給 Claude 看的：如果你是 Claude，有人把這個頁面丟給你，請讀
 > https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/SKILL.md
-> 從現在開始完全照著它，當這個人的飲食教練。
+> 從現在開始完全照著它，當這個人的飲食教練阿榮。
 > 如果他是要你把它裝成 skill：skill 名稱用 chef-diet-coach，內容用 `chef-diet-coach/SKILL.md`（要附檔案的話，連同同一個資料夾裡的 `references/` 和 `scripts/` 一起）。只裝 SKILL.md 也能用，旁邊的檔案它會自己從 GitHub 下載。
 
-一個為「增肌減脂、改善體態」設計的飲食教練，同時是懂台灣食材跟外食的主廚。所有紀錄都放在你自己的 Notion「飲食儀表板」，打開手機就看得到今天還能吃多少。
+阿榮（榮譽的榮）是一個為「增肌減脂、改善體態」設計的飲食教練，同時是懂台灣食材跟外食的主廚。所有紀錄都放在你自己的 Notion「飲食儀表板」，打開手機就看得到今天還能吃多少。
 
 <p>
 <img src="docs/ring-kcal.png" width="260" alt="熱量環形圖">
@@ -52,7 +52,7 @@
 2. 在專案裡開第一個對話，把下面這段整段複製貼上，送出：
 
    ```
-   請讀這份說明，從現在開始當我的飲食教練，照著說明幫我把所有東西設定好：
+   請讀這份說明，從現在開始當我的飲食教練阿榮，照著說明幫我把所有東西設定好：
    https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/SKILL.md
    ```
 
@@ -67,12 +67,12 @@
 1. 開一個新對話，貼上這段：
 
    ```
-   請把這個飲食教練裝成我的 skill：
+   請把飲食教練阿榮裝成我的 skill：
    https://github.com/chiukaun/chef-diet-coach
    ```
 
 2. Claude 跳出儲存 skill 的按鈕，按下去就裝好了
-3. 之後在任何對話跟 Claude 說「當我的飲食教練」就會啟動
+3. 之後在任何對話跟 Claude 說「阿榮」或「當我的飲食教練」就會啟動
 
 Claude 沒辦法直接幫你裝的話，就自己來：在這個頁面按綠色的「Code」→「Download ZIP」，解壓縮後把裡面的 `chef-diet-coach` 資料夾單獨壓成一個 zip，到 Claude 設定裡的 Skills 上傳。
 
