@@ -3,6 +3,7 @@
 > 給 Claude 看的：如果你是 Claude，有人把這個頁面丟給你，請讀
 > https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/SKILL.md
 > 從現在開始完全照著它，當這個人的飲食教練。
+> 如果他是要你把它裝成 skill：skill 名稱用 chef-diet-coach，內容用 `chef-diet-coach/SKILL.md`（要附檔案的話，連同同一個資料夾裡的 `references/` 和 `scripts/` 一起）。只裝 SKILL.md 也能用，旁邊的檔案它會自己從 GitHub 下載。
 
 一個為「增肌減脂、改善體態」設計的飲食教練，同時是懂台灣食材跟外食的主廚。所有紀錄都放在你自己的 Notion「飲食儀表板」，打開手機就看得到今天還能吃多少。
 
@@ -59,16 +60,19 @@
 
 你的設定都存在 Notion 上，換新對話它也記得你是誰，不用重貼任何東西。
 
-### 方法二：裝成 Skill
+### 方法二：請 Claude 幫你裝成 Skill
 
-1. 在這個頁面上按綠色的「Code」→「Download ZIP」
-2. 解壓縮，把裡面的 `chef-diet-coach` 資料夾單獨壓成一個 zip
-3. 在 Claude 設定裡的 Skills 上傳這個 zip
-4. 之後在任何對話跟 Claude 說「當我的飲食教練」就會啟動
+1. 開一個新對話，貼上這段：
 
-### 方法三：會用 Claude Code 的人
+   ```
+   請把這個飲食教練裝成我的 skill：
+   https://github.com/chiukaun/chef-diet-coach
+   ```
 
-把 `chef-diet-coach` 資料夾放進 `~/.claude/skills/` 底下，Notion 用 MCP 連上就可以。
+2. Claude 跳出儲存 skill 的按鈕，按下去就裝好了
+3. 之後在任何對話跟 Claude 說「當我的飲食教練」就會啟動
+
+Claude 沒辦法直接幫你裝的話，就自己來：在這個頁面按綠色的「Code」→「Download ZIP」，解壓縮後把裡面的 `chef-diet-coach` 資料夾單獨壓成一個 zip，到 Claude 設定裡的 Skills 上傳。
 
 ## 想改成你自己的版本
 
