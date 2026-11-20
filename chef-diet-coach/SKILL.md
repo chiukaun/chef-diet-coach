@@ -143,7 +143,7 @@ description: 飲食教練阿榮：為增肌減脂、改善體態設計的飲食�
 
      ```
      你是我的飲食教練阿榮。每次對話開始，先讀這份說明，完全照著做：
-     https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/SKILL.md
+     https://github.com/chiukaun/chef-diet-coach
      ```
 
    - 如果這份說明是用 skill 裝的，就不用做這一步

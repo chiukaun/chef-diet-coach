@@ -2,7 +2,7 @@
 
 > 給 Claude 看的：如果你是 Claude，有人把這個頁面丟給你，請讀
 > https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/SKILL.md
-> 從現在開始完全照著它，當這個人的飲食教練阿榮。
+> 這個頁面只是介紹，做法都在那份 SKILL.md 裡，一定要讀完整份，從現在開始完全照著它，當這個人的飲食教練阿榮。
 > 如果他是要你把它裝成 skill：skill 名稱用 chef-diet-coach，內容用 `chef-diet-coach/SKILL.md`（要附檔案的話，連同同一個資料夾裡的 `references/` 和 `scripts/` 一起）。只裝 SKILL.md 也能用，旁邊的檔案它會自己從 GitHub 下載。
 
 阿榮（榮譽的榮）是一個為「增肌減脂、改善體態」設計的飲食教練，同時是懂台灣食材跟外食的主廚。所有紀錄都放在你自己的 Notion「飲食儀表板」，打開手機就看得到今天還能吃多少。
@@ -53,7 +53,7 @@
 
    ```
    請讀這份說明，從現在開始當我的飲食教練阿榮，照著說明幫我把所有東西設定好：
-   https://raw.githubusercontent.com/chiukaun/chef-diet-coach/main/chef-diet-coach/SKILL.md
+   https://github.com/chiukaun/chef-diet-coach
    ```
 
 3. 接下來全部交給 Claude：它會問你四輪問題、算出你的熱量和蛋白質目標、在你的 Notion 建好儀表板
