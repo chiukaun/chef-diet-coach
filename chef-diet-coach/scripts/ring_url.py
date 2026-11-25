@@ -2,8 +2,8 @@
 """今天的熱量／蛋白質環形圖：組出 QuickChart（Chart.js v4）圖片網址。
 
 整圈 = 目標。每個餐次一段顏色，預留的東西是空心橘框，剩下的是暗色底軌，
-中間寫「還能吃 X 大卡」或「還差 X 克」。網址直接放進 Notion 圖片區塊，
-Notion 會自己去載圖，不用上傳檔案。
+中間寫「還能吃 X 大卡」或「還差 X 克」，下面再一行「已吃 Y 大卡／克」（11/25 起）。
+網址直接放進 Notion 圖片區塊，Notion 會自己去載圖，不用上傳檔案。
 
 用法：
   python3 ring_url.py kcal '{"breakfast":450,"lunch":700,"reserve":300,"target":2000}'
@@ -57,20 +57,23 @@ def build_config(kind, g):
     unit = "大卡" if kind == "kcal" else "克"
     small = {"family": FONT, "size": 13, "weight": 400}
     big = {"family": FONT, "size": 44, "weight": 700}
+    eaten_line = f"已吃 {int(round(eaten))} {unit}"
+    eaten_font = {"family": FONT, "size": 13, "weight": 700}
     if kind == "kcal":
         if rem >= -1e-9:
-            lines = ["還能吃", str(int(round(max(rem, 0)))), unit]
-            colors = [MUTED, TEXT, MUTED]
+            lines = ["還能吃", str(int(round(max(rem, 0)))), unit, eaten_line]
+            colors = [MUTED, TEXT, MUTED, LEGEND]
         else:
             over = int(round(-rem))
-            lines = ["超過", str(over), unit]
-            colors = [MUTED, OVER_ORANGE if over <= 200 else OVER_RED, MUTED]
-        fonts = [small, big, small]
+            lines = ["超過", str(over), unit, eaten_line]
+            colors = [MUTED, OVER_ORANGE if over <= 200 else OVER_RED, MUTED, LEGEND]
+        fonts = [small, big, small, eaten_font]
     else:
         if eaten >= tgt - 1e-9:
             lines, colors, fonts = ["今天吃了", str(int(round(eaten))), unit], [MUTED, TEXT, MUTED], [small, big, small]
         elif rem > 1e-9:
-            lines, colors, fonts = ["還差", str(int(round(rem))), unit], [MUTED, TEXT, MUTED], [small, big, small]
+            lines = ["還差", str(int(round(rem))), unit, eaten_line]
+            colors, fonts = [MUTED, TEXT, MUTED, LEGEND], [small, big, small, eaten_font]
         else:
             mid = {"family": FONT, "size": 20, "weight": 700}
             lines = ["含預留", "已達標", f"已吃 {int(round(eaten))} 克", f"含預留 {int(round(eaten + res))} 克"]
